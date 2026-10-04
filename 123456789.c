@@ -106,22 +106,7 @@ char *get_str_dstring(struct dstring *dstr)
 	return dstr->buffer;
 }
 /*
-bool check_str_cmp(char *a, char *b)
-{
-	int count = 0;
-	for(char *ca = a, *cb = b; *ca != '\0' && *cb != '\0'; ca++, cb++)
-	{
-		if(*ca == *cb)
-		{
-			count++;		
-		}
-		else
-		{
-			printf("%c %c\n", *ca, *cb);
-		}
-	}	
-	return true;
-}
+
 */
 
 
@@ -265,7 +250,10 @@ int fill_http_head(char **text, struct HTTPHead ***list)
 	{
 		int header_data = header_field_pull(buf, text_len + 1, scroll);
 		if(header_data == 0)
+		{
+			count = i;
 			break;
+		}
 		scroll += header_data + 1;
 		heads[i] = http_head(buf);
 	}	
