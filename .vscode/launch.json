@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/heathfortin/programing/school/3214/a1/A01Code",
+      "program": "/Users/heathfortin/programing/school/3214/a1/A01Code/build/Debug/outDebug"
+    }
+  ]
+}

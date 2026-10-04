@@ -1,0 +1,4 @@
+
+curl > get file
+wget > download 
+cut > split by delim
