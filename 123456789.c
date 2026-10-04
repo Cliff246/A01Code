@@ -189,7 +189,12 @@ struct HTTPHead *http_head(char *line)
 	}
 
 	char *name = copy_subset(line, 0, split);
-	char *value = copy_subset(line, split + 2, length - split - 2 );
+	int start = split + 1;
+	while(line[start] == ' ' || line[start] == '\t')
+	{
+		start++;
+	}	
+	char *value = copy_subset(line, start, length - start);
 	if(!name || !value)
 		ERROR("name | value == null");
 
